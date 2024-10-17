@@ -68,6 +68,7 @@ async function generateApiResponse(aiChatBox) {
   }
   finally {
     aiChatBox.querySelector(".loading").style.display = "none"
+    chatContainer.scrollTop = chatContainer.scrollHeight;
   }
 }
 
@@ -83,13 +84,13 @@ function showLoading() {
         <img src="load.gif" class="loading" width="50px">`
   let aiChatBox = createChatBox(html, "ai-chat-box")
   chatContainer.appendChild(aiChatBox)
-  generateApiResponse(aiChatBox)
-
+  chatContainer.scrollTop = chatContainer.scrollHeight;
+  generateApiResponse(aiChatBox);
 }
 
 function addChat() {
   h1.style.display = "none"
-  userMessage = prompt.value;
+  userMessage = prompt.value.trim();
   const html = `<p class="text"></p>`
   let userChatBox = createChatBox(html, "user-chat-box")
   userChatBox.querySelector(".text").innerText = userMessage

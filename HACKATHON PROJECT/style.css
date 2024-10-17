@@ -120,6 +120,8 @@ z-index: 25;
     flex-direction: column;
     gap:20px;
     font-size: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .input-area{
     width: 100%;
