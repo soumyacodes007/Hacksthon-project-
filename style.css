@@ -1,0 +1,892 @@
+/* cant do this , eta ami home-content h1 e add kortam but hocche na  */
+@font-face {
+    font-family: "Embassador", sans-serif;
+    src: url(Eutopia\ Embassador.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(270deg, #a9ccbe, #ccd9eb, #afbdb0, #d6d7ce, #f0f0f0);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+header {
+    background-color: rgba(15, 46, 34);
+    padding: 20px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    color: #ffffff;
+    font-family: Impact, Charcoal, sans-serif;
+    letter-spacing: 4.8px;
+    word-spacing: 2px;
+    color: #fef3f3;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.user-actions .sign-in {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #ff8944;
+}
+
+.user-actions .sign-in:hover {
+    text-decoration: underline;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: none;
+
+}
+
+.header {
+
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.header li:last-child::after {
+    margin-right: 30px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header a:hover {
+    color: #ff9f7c;
+}
+
+.home {
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-image: url('background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*text decoration pore korchi... age eta dekh*/
+.home-content h1 {
+    font-size: 100px;
+    margin-bottom: 20px;
+    margin-top: -150px;
+    font-weight: 1000;
+    font-family: "Embassador", sans-serif;
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease
+}
+
+.home-content h1:hover {
+    transform: scale(1.1);
+    /* Slightly enlarge the title */
+    color: #e9feef;
+}
+
+.home-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: monospace;
+}
+
+.get-started-btn {
+    display: inline-block;
+    background-color: rgba(108, 252, 197, 0.3);
+    color: white;
+    padding: 12px 30px;
+    font-size: 14px;
+    text-decoration: none;
+    border-width: 10px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.get-started-btn:hover {
+    background-color: #c3420b;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.about {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Quote section */
+
+.quote-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Allow items to wrap on smaller screens */
+    margin: 40px;
+}
+
+.picture {
+    width: 10vw;
+    /* Make the picture size responsive */
+    max-width: 40px;
+    height: 10vw;
+    max-height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.founder-quote {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: center;
+    /* Center the quote */
+    flex-wrap: wrap;
+    margin-left: 0;
+    /* Remove fixed margin to allow flexibility */
+}
+
+.fpic {
+    width: 15vw;
+    /* Responsive size */
+    max-width: 60px;
+    height: 15vw;
+    max-height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.founder {
+    font-size: 5vw;
+    /* Responsive font size */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Quote box styling */
+.quote-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-text {
+    flex-grow: 1;
+    text-align: center;
+    /* Center text on smaller screens */
+}
+
+.quote-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center content */
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.author-name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.author-designation {
+    font-size: 15px;
+    color: #666;
+    display: block;
+    text-align: center;
+    /* Align below the name */
+    margin-left: 0;
+    /* Remove negative margin */
+}
+
+.image-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 80px 80px 80px 80px;
+    margin-top: 30px;
+    background-color: rgba(229, 235, 227, 0.749);
+}
+
+.image-container {
+    position: relative;
+    width: 50%;
+}
+
+.bottom-image {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    display: block;
+    background-position: center;
+}
+
+.top-image {
+    position: absolute;
+    max-width: 300px;
+    width: 60%;
+    /* Adjust the width to be more responsive */
+    height: auto;
+    top: 20%;
+    left: 45%;
+    box-shadow: 0 4px 8px rgba(188, 158, 158, 0.2);
+    border: 5px solid #ccc;
+}
+
+.text-container {
+    width: 50%;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+.section-heading {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.section-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.mt-3 {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.button-membership {
+    display: inline-block;
+    background-color: rgba(93, 255, 196, 0.3);
+    color: rgb(0, 0, 0);
+    padding: 12px 30px;
+    font-size: 14px;
+    text-decoration: none;
+    border-width: 10px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #354a38;
+}
+
+.button-membership:hover {
+    background-color: #354a38;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    color: #c2e5c8;
+    transform: translateY(-2px);
+}
+
+.footer-container {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    /* Ensure footer is placed properly */
+}
+
+.footer-content {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.footer-link {
+    color: #60d5b0;
+    text-decoration: none;
+    padding: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ad250d;
+}
+
+.footer-separator {
+    color: rgb(138, 70, 70);
+    padding: 0 10px;
+    /* Space around the separator */
+}
+
+/* For membership plan */
+.membership-container {
+    background-color: #dce5e1;
+    color: white;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    padding: 40px;
+
+}
+
+.membership-container h1 {
+    color: #247556;
+    font-size: 3em;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    color: #0f2e22;
+    margin-bottom: 40px;
+    font-size: 1.2em;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.plan {
+    background-color: #222;
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+    cursor: default;
+}
+
+.plan:hover {
+    transform: translateY(-10px);
+}
+
+.plan-title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.price {
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #bbb;
+    font-size: 1.2em;
+}
+
+.feature {
+    text-align: left;
+    margin: 15px 0;
+    font-size: 1em;
+}
+
+.feature::before {
+    content: '✓';
+    margin-right: 10px;
+    color: #ff4d4d;
+}
+
+.subscribe-btn {
+    background-color: #247556;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #1e6047;
+}
+
+.yearly-plan {
+    background-color: #247556;
+    color: white;
+}
+
+.yearly-plan .subscribe-btn {
+    background-color: white;
+    color: #1e6047;
+}
+
+.yearly-plan .subscribe-btn:hover {
+    background-color: #f5f5f5;
+}
+
+/* Trainers section */
+.trainers-section {
+    height: 100%;
+    text-align: center;
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin: 40px;
+}
+
+.trainers-section h2 {
+    color: #01892a;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.trainers-section h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.trainers-section p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trainers-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.trainer-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 400px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.trainer-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.trainer-card h4 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.trainer-card p {
+    color: #059a3e;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.trainer-card button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.trainer-card button:hover {
+    background-color: #ffffff;
+}
+
+.trainer-card:hover {
+    transform: translateY(-10px);
+}
+
+.view-all {
+    display: inline-block;
+    margin-top: 30px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.view-all:hover {
+    background-color: #555;
+}
+
+/* Bottom section  */
+
+.footer {
+    color: #fff;
+    background-color: #000;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #ccc;
+}
+
+.footer-address {
+    max-width: 300px;
+}
+
+.footer-address p {
+    margin: 5px 0;
+}
+
+.footer-address a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-address a:hover {
+    color: #ccc;
+}
+
+/* Email subscribe form styles */
+.email-subscribe {}
+
+.post {
+    display: flex;
+}
+
+.email-subscribe input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.email-subscribe button {
+    height: 35px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 10px;
+}
+
+.email-subscribe button:hover {
+    background-color: #0056b3;
+}
+
+/* Ai-chat-bot section */
+
+.chat-section {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    color: white;
+    display: flex;
+    width: 380px;
+    flex-wrap: wrap;
+    justify-content: end;
+    z-index: 1000;
+}
+
+.chat-button {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: #ff8944;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.chat-button:hover {
+    background-color: #ff6e22;
+}
+
+.chat-box {
+    background-color: rgba(78, 78, 78, 0.7);
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.active-chat-box {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.chat-container {
+    text-align: center;
+    width: 100%;
+    height: 380px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.user-chat-box, .ai-chat-box {
+    background-color: #ddd;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: fit-content;
+    max-width: 80%;
+}
+
+.user-chat-box {
+    align-self: flex-end;
+    background-color: rgb(154, 154, 255);
+    border-radius: 20px 20px 0 20px;
+    position: relative;
+    margin-right: 10px;
+    margin-left: auto;
+    padding: 15px;
+    width: fit-content;
+    max-width: 80%;
+    text-align: right;
+}
+
+.ai-chat-box {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    border-radius: 0 20px 20px 20px;
+    margin-right: auto;
+    margin-left: 10px;
+    width: fit-content;
+    max-width: 80%;
+    text-align: left;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.prompt {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+input.prompt:focus {
+    box-shadow: 0 0 5px #ff8944;
+}
+
+input[type="text"], button {
+    font-size: 1rem;
+}
+
+.input-area button {
+    color: white;
+}
+
+button {
+    background-color: #ff8944;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff6e22;
+}
+
+
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .header {
+        flex-direction: column;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .header li {
+        margin: 10px 0;
+    }
+
+    .user-actions {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .image-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .image-container,
+    .text-container {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 20px auto;
+    }
+
+    .top-image {
+        width: 50%;
+        left: 53%;
+    }
+
+    .bottom-image {
+        width: calc(100% - 18px);
+    }
+
+    .section-heading {
+        font-size: 28px;
+    }
+
+    .section-content, {
+        font-size: 14px;
+    }
+
+    .trainers-section {
+        margin: 0;
+    }
+
+    .plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+    }
+
+    .email-subscribe {
+        margin-top: 20px;
+    }
+
+    .chat-button {
+        bottom: 30px;
+        right: 30px;
+    }
+
+    .chat-section {
+        right: 20px;
+        bottom: 20px;
+        width: 300px;
+    }
+
+    .chat-container {
+        width: 100%;
+        height: 300px;
+    }
+
+    .user-chat-box, .ai-chat-box {
+        max-width: 70%;
+    }
+}
