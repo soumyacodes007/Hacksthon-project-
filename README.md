@@ -24,3 +24,9 @@ Example prompts for the chatbot:
 Receive Suggestions: The chatbot provides a personalized workout based on your inputs, including the number of sets, reps, and rest periods.
 
 Track Your Progress: Log your completed workouts and monitor improvements through the progress tracker.
+
+
+MADE BY ---
+1. Debjyoti Biswas
+2. Soumyadeep Bhowmik
+3. Anushka Bose
